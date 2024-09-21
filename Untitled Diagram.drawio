@@ -1,9 +1,54 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.16">
   <diagram name="Page-1" id="l-tdR8uEzvwsLRFKwBkP">
-    <mxGraphModel>
+    <mxGraphModel dx="1026" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Load PDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Split into Chunks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Generate Embeddings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Retrieve Relevant Sections" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Setup LLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="9" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Parse Results" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="11" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=classic;html=1;" edge="1" parent="1" source="13" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
